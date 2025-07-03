@@ -10,34 +10,18 @@ using System.Windows.Forms;
 
 namespace ProtótipoGerenciamentoEscola
 {
-    public partial class TelaResponsavel : Form
+    public partial class TelaProfessor : Form
     {
-        public TelaResponsavel()
+        public TelaProfessor()
         {
             InitializeComponent();
         }
 
-        private void pbFechar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnTelaAluno_Click(object sender, EventArgs e)
+        private void btnFichaCadastral_Click(object sender, EventArgs e)
         {
             TelaPrincipal telaAluno = new TelaPrincipal();
             telaAluno.ShowDialog();
-        }
-
-        private void btnEndContato_Click(object sender, EventArgs e)
-        {
-            TelaEndereco telaEndereco = new TelaEndereco();
-            telaEndereco.ShowDialog();
-            // Vai para a tela de cadastro de endereço e contato
-        }
-
-        private void btnFichaCadastral_Click(object sender, EventArgs e)
-        {
-
+            // Vai para a tela de ficha cadastral que seria a mesma tela de cadastro de aluno
         }
 
         private void btnTurmas_Click(object sender, EventArgs e)
@@ -45,6 +29,11 @@ namespace ProtótipoGerenciamentoEscola
             TelaTurma telaTurma = new TelaTurma();
             telaTurma.ShowDialog();
             // Vai para a tela de cadastro de turmas
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
