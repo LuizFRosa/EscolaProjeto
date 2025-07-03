@@ -47,5 +47,10 @@ namespace ProtótipoGerenciamentoEscola
             telaAluno.ShowDialog();
             // Vai para a tela de ficha cadastral que seria a mesma tela de cadastro de aluno
         }
+
+        private void btnCadastro_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

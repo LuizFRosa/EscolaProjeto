@@ -84,6 +84,7 @@
             btnLimpar.TabIndex = 27;
             btnLimpar.TabStop = false;
             btnLimpar.UseVisualStyleBackColor = false;
+            btnLimpar.Click += btnLimpar_Click;
             // 
             // btnFichaCadastral
             // 
@@ -130,6 +131,7 @@
             btnTelaProfessor.TabIndex = 34;
             btnTelaProfessor.TabStop = false;
             btnTelaProfessor.UseVisualStyleBackColor = false;
+            btnTelaProfessor.Click += btnTelaProfessor_Click;
             // 
             // dgvProfessores
             // 
@@ -144,6 +146,7 @@
             cbTurno.DropDownStyle = ComboBoxStyle.DropDownList;
             cbTurno.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cbTurno.FormattingEnabled = true;
+            cbTurno.Items.AddRange(new object[] { "Manhã", "Tarde", "Noite" });
             cbTurno.Location = new Point(101, 143);
             cbTurno.Name = "cbTurno";
             cbTurno.Size = new Size(120, 29);

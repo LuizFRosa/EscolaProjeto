@@ -80,6 +80,7 @@
             btnCadastro.TabIndex = 26;
             btnCadastro.TabStop = false;
             btnCadastro.UseVisualStyleBackColor = false;
+            btnCadastro.Click += btnCadastro_Click;
             // 
             // btnEndContato
             // 
@@ -184,6 +185,7 @@
             btnPesquisar.TabIndex = 42;
             btnPesquisar.TabStop = false;
             btnPesquisar.UseVisualStyleBackColor = false;
+            btnPesquisar.Click += btnPesquisar_Click;
             // 
             // txtNome
             // 

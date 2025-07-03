@@ -38,7 +38,6 @@
             pbProfessor = new PictureBox();
             txtNome = new TextBox();
             mtxtCPF = new MaskedTextBox();
-            mtxtNascimento = new MaskedTextBox();
             mtxtTelCelular = new MaskedTextBox();
             mtxtTelResidencia = new MaskedTextBox();
             txtEmail = new TextBox();
@@ -50,7 +49,7 @@
             txtComplemento = new TextBox();
             txtEstadoSigla = new TextBox();
             txtCidade = new TextBox();
-            cbTurno = new ComboBox();
+            cbDisciplina = new ComboBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -63,6 +62,7 @@
             label10 = new Label();
             label11 = new Label();
             label12 = new Label();
+            dtpDataNascimento = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbProfessor).BeginInit();
             SuspendLayout();
@@ -124,6 +124,7 @@
             btnCadastro.TabIndex = 34;
             btnCadastro.TabStop = false;
             btnCadastro.UseVisualStyleBackColor = false;
+            btnCadastro.Click += btnCadastro_Click;
             // 
             // btnCancelar
             // 
@@ -154,6 +155,7 @@
             btnLimpar.TabIndex = 36;
             btnLimpar.TabStop = false;
             btnLimpar.UseVisualStyleBackColor = false;
+            btnLimpar.Click += btnLimpar_Click;
             // 
             // pbProfessor
             // 
@@ -183,17 +185,6 @@
             mtxtCPF.Name = "mtxtCPF";
             mtxtCPF.Size = new Size(139, 29);
             mtxtCPF.TabIndex = 43;
-            // 
-            // mtxtNascimento
-            // 
-            mtxtNascimento.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            mtxtNascimento.ForeColor = SystemColors.WindowText;
-            mtxtNascimento.Location = new Point(45, 248);
-            mtxtNascimento.Mask = "00/00/0000";
-            mtxtNascimento.Name = "mtxtNascimento";
-            mtxtNascimento.Size = new Size(138, 29);
-            mtxtNascimento.TabIndex = 44;
-            mtxtNascimento.ValidatingType = typeof(DateTime);
             // 
             // mtxtTelCelular
             // 
@@ -307,16 +298,16 @@
             txtCidade.Size = new Size(134, 28);
             txtCidade.TabIndex = 55;
             // 
-            // cbTurno
+            // cbDisciplina
             // 
-            cbTurno.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbTurno.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cbTurno.FormattingEnabled = true;
-            cbTurno.Items.AddRange(new object[] { "Português", "", "", "Matemática", "", "", "Física", "", "", "Química", "", "", "Biologia", "", "", "História", "", "", "Geografia", "", "", "Inglês", "", "", "Educação Física", "", "", "Artes " });
-            cbTurno.Location = new Point(481, 354);
-            cbTurno.Name = "cbTurno";
-            cbTurno.Size = new Size(188, 29);
-            cbTurno.TabIndex = 56;
+            cbDisciplina.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbDisciplina.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbDisciplina.FormattingEnabled = true;
+            cbDisciplina.Items.AddRange(new object[] { "Português", "Matemática", "Física", "Química", "Biologia", "História", "Geografi", "Inglês", "Educação Física", "Artes " });
+            cbDisciplina.Location = new Point(481, 354);
+            cbDisciplina.Name = "cbDisciplina";
+            cbDisciplina.Size = new Size(188, 29);
+            cbDisciplina.TabIndex = 56;
             // 
             // label1
             // 
@@ -450,12 +441,20 @@
             label12.TabIndex = 68;
             label12.Text = "*";
             // 
+            // dtpDataNascimento
+            // 
+            dtpDataNascimento.Location = new Point(44, 250);
+            dtpDataNascimento.Name = "dtpDataNascimento";
+            dtpDataNascimento.Size = new Size(139, 23);
+            dtpDataNascimento.TabIndex = 69;
+            // 
             // TelaProfessor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(960, 540);
+            Controls.Add(dtpDataNascimento);
             Controls.Add(label12);
             Controls.Add(label11);
             Controls.Add(label10);
@@ -468,7 +467,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(cbTurno);
+            Controls.Add(cbDisciplina);
             Controls.Add(txtCidade);
             Controls.Add(txtEstadoSigla);
             Controls.Add(txtComplemento);
@@ -480,7 +479,6 @@
             Controls.Add(txtEmail);
             Controls.Add(mtxtTelResidencia);
             Controls.Add(mtxtTelCelular);
-            Controls.Add(mtxtNascimento);
             Controls.Add(mtxtCPF);
             Controls.Add(txtNome);
             Controls.Add(pbProfessor);
@@ -510,7 +508,6 @@
         private PictureBox pbProfessor;
         private TextBox txtNome;
         private MaskedTextBox mtxtCPF;
-        private MaskedTextBox mtxtNascimento;
         private MaskedTextBox mtxtTelCelular;
         private MaskedTextBox mtxtTelResidencia;
         private TextBox txtEmail;
@@ -522,7 +519,7 @@
         private TextBox txtComplemento;
         private TextBox txtEstadoSigla;
         private TextBox txtCidade;
-        private ComboBox cbTurno;
+        private ComboBox cbDisciplina;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -535,5 +532,6 @@
         private Label label10;
         private Label label11;
         private Label label12;
+        private DateTimePicker dtpDataNascimento;
     }
 }

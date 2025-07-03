@@ -262,6 +262,7 @@
             btnCadastro.TabIndex = 25;
             btnCadastro.TabStop = false;
             btnCadastro.UseVisualStyleBackColor = false;
+            btnCadastro.Click += btnCadastro_Click;
             // 
             // btnTelaAluno
             // 

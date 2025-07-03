@@ -167,6 +167,7 @@
             btnCadastro.TabIndex = 34;
             btnCadastro.TabStop = false;
             btnCadastro.UseVisualStyleBackColor = false;
+            btnCadastro.Click += btnCadastro_Click;
             // 
             // btnLimpar
             // 
@@ -182,6 +183,7 @@
             btnLimpar.TabIndex = 35;
             btnLimpar.TabStop = false;
             btnLimpar.UseVisualStyleBackColor = false;
+            btnLimpar.Click += btnLimpar_Click;
             // 
             // pbResponsavel01
             // 
@@ -237,6 +239,7 @@
             btnPesquisar.TabIndex = 40;
             btnPesquisar.TabStop = false;
             btnPesquisar.UseVisualStyleBackColor = false;
+            btnPesquisar.Click += btnPesquisar_Click;
             // 
             // txtNacionalidade
             // 

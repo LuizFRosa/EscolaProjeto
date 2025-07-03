@@ -28,5 +28,18 @@ namespace ProtótipoGerenciamentoEscola
             telaAluno.ShowDialog();
             // Vai para a tela de ficha cadastral que seria a mesma tela de cadastro de aluno
         }
+
+        private void btnTelaProfessor_Click(object sender, EventArgs e)
+        {
+            TelaProfessor telaProfessor = new TelaProfessor();
+            telaProfessor.ShowDialog();
+            // Vai para a tela de cadastro de professor 
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtTurma.Clear();
+            cbTurno.SelectedIndex = -1;
+        }
     }
 }

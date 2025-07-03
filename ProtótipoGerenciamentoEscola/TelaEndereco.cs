@@ -49,5 +49,15 @@ namespace ProtótipoGerenciamentoEscola
             telaTurma.ShowDialog();
             // Vai para a tela de cadastro de turmas
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCadastro_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
